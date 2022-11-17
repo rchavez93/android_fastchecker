@@ -17,9 +17,4 @@
         android:label="@string/title_check"
         tools:layout="@layout/fragment_check" />
 
-    <fragment
-        android:id="@+id/navigation_save"
-        android:name="com.example.fastchecker.ui.save.SaveFragment"
-        android:label="@string/title_save"
-        tools:layout="@layout/fragment_save" />
 </navigation>
