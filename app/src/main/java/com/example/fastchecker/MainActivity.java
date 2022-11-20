@@ -50,13 +50,14 @@ public class MainActivity extends AppCompatActivity implements CheckFragment.has
 
         loadHashFile();
         Instant end = Instant.now();
-        //Log.d("DEBUG", "TOTAL>>>Time for MainActivity class : "+Duration.between(start, end));
+        Log.d("DEBUG", "TOTAL>>>Time for MainActivity class : "+Duration.between(start, end));
 
     }
 
     public void loadHashFile() {
 
 
+        Instant start = Instant.now();
         try {
 
             InputStream myInputStream = getResources().openRawResource(R.raw.betterwords);
@@ -75,6 +76,8 @@ public class MainActivity extends AppCompatActivity implements CheckFragment.has
 
             Log.d("EXCEPTION", "NullPointer occurred! Index out of bounds!");
         }
+        Instant end = Instant.now();
+        Log.d("DEBUG", "TOTAL>>>Time for hashFile : "+ Duration.between(start, end));
 
         //Log.d("DEBUG", "SUCCESS! myHash is "+myHash.size());
     }
